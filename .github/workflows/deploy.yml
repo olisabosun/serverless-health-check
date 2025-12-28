@@ -145,10 +145,6 @@ jobs:
             -backend-config="dynamodb_table=terraform-state-lock" \
             -backend-config="encrypt=true"
 
-      - name: Terraform Format
-        working-directory: ./terraform
-        run: terraform fmt -recursive
-
       - name: Terraform Validate
         working-directory: ./terraform
         run: terraform validate
